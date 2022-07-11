@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>PokeDex</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://kit.fontawesome.com/b2e2f55c62.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <%-include ('partials/navbar.ejs') %>
+    <div class="container">
+
+        <form method="post" action="/buscar">
+
+            <div class="containerPesquisa">
+
+                <p class="labelPaginaInicial">Faça uma busca pelo nome do Pokémon desejado:</p>
+                <br>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
+                    <input type="text" class="form-control" name="nomePokemon" placeholder="ex: PIKACHU" required aria-describedby="addon-wrapping">
+                </div>
+                <br>
+                <div>
+                    <button type="submit" class="btn btn-outline-light">Pesquisar</button>
+                </div>
+                <br>
+                
+                   <p class="labelPaginaInicial">Ou veja a lista com todos os Pokémons!</p>
+                   <a href="/pokemons/1"><button type="button" class="btn btn-outline-light">Acessar lista</button></a>
+                   
+            </div>
+        </form>
+
+    </div>
+
+</body>
+</html>
